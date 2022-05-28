@@ -1,0 +1,187 @@
+JFDML JFormDesigner: "7.0.2.4.305" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+				name: "parentcard"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :237:237:p, par l {seq l {comp label2:::p:86:p, space :::p, comp ip:::p:298:p}, seq l {par l:::p {comp label1::::86:x, comp label5::::86:x}, space :::p, par l:::p {comp username::::298:x, comp entry::::298:x, comp serverAddr::l::298:x}}}, space ::276:x}}"
+					"$verticalGroup": "par l {seq t {space ::166:x, par b {comp label2::b:p:44:p, comp ip::b:p::p}, space s:::p, par b {comp label5::b:p:55:p, comp serverAddr::b:p::p}, space :::p, par b {comp label1::b:p:72:p, comp username::b:p::p}, space :p:42:p, comp entry:::p:96:p, space :p:109:p}}"
+				} ) {
+					name: "Login"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "entry"
+						"text": "Login"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "entryMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "username"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "Username"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "IP"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "ip"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "Server IP"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "serverAddr"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card1"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq {par t {comp Rooms::::0:x, seq {comp maininput::::480:x, space :::p, comp send:::p:111:p}}, space :p:4:p}, seq {comp label4:::p:60:p, space ::541:x}}, par l {seq {comp CreateRoom:::p:144:p, space :p::p, comp JoinRoom:::p:131:p}, comp Chat:::p:290:p}, space :::p}}"
+					"$verticalGroup": "par l {seq {space :p:13:p, comp label4::::24:x, space :::p, par l {comp Rooms::::493:x, comp Chat::::0:x}, par b {comp JoinRoom::b:p:60:p, comp send::b:p:66:p, comp CreateRoom::b:p:56:p, comp maininput::b:p:66:p}, space :::p}}"
+				} ) {
+					name: "MainWindow"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "Chat"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "txt"
+							"text": "Ready..."
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "maininput"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "send"
+						"text": "Send"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "sendMouseClicked", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "Rooms"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "RoomList"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "JoinRoom"
+						"text": "Join room"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "JoinRoomMouseClicked", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "JoinRoomMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "CreateRoom"
+						"text": "Create room"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "CreateRoomMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "Rooms"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card2"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par t {seq {space :::p, par l {seq l {comp roominput::::532:x, space :::p, comp roomSend:::p:169:p}, seq l {comp label3:::p:49:p, space :0:0:x}, comp scrollPane1::t:::x}, space :::p, par l {seq {comp kick:::p::p, space :::p, comp startgame:::::x}, comp roomChat:::::x, seq t {space :0:0:x, comp quit:::p:141:p}}, space :::p}}"
+					"$verticalGroup": "par l {seq t {space :::p, par b {comp label3::b:::x, comp quit::b:p::p}, space :::p, par l {seq {comp roomChat:::p:462:p, space :::p, par t:::p {comp startgame::t::73:x, comp kick::l::73:x, comp roomSend::l::73:x}}, seq {comp scrollPane1:::p:462:p, space :p:5:p, comp roominput:::p:73:p}}, space :::p}}"
+				} ) {
+					name: "RoomWindow"
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "roominput"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "roomChat"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "roomText"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "roomSend"
+						"text": "Send"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "roomSendMouseClicked", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "playerList"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "kick"
+						"text": "Kick"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "kickMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "startgame"
+						"text": "StartGame"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "startgameMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Players"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "quit"
+						"text": "Quit"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "quitMouseClicked", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card3"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp chessBoard:::::x, space :::p, comp GameInfo:::p::p, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par l {comp GameInfo:::::x, comp chessBoard:::::x}, space :::p}}"
+				} ) {
+					name: "Gomoku"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:601:x}"
+						"$verticalGroup": "par l {space :0:596:x}"
+					} ) {
+						name: "chessBoard"
+						"background": new java.awt.Color( 255, 204, 51, 255 )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, par t:::p {comp GG::::272:x, comp black::l:::x, comp white::l:::x, comp turn::l:::x}, space :::x}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp black:::p:72:p, space :::p, comp white:::p:81:p, space u:::p, comp turn:::p:77:p, space ::230:x, comp GG:::p:106:p, space :::p}}"
+					} ) {
+						name: "GameInfo"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "black"
+							"text": "Black :"
+							"font": new java.awt.Font( "Yu Gothic UI Semibold", 0, 20 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "white"
+							"text": "White :"
+							"font": new java.awt.Font( "Yu Gothic UI Semibold", 0, 20 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "turn"
+							"text": "Turn:"
+							"font": new java.awt.Font( "Yu Gothic UI Semibold", 0, 20 )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "GG"
+							"text": "GG"
+							"font": new java.awt.Font( "Yu Gothic UI Semibold", 0, 24 )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "surrenderMouseClicked", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "GGMouseClicked", true ) )
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card4"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 0 )
+			"size": new java.awt.Dimension( 905, 640 )
+		} )
+	}
+}
